@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+
+canvas{
+    width: 75%;
+}
+
+#status{
+    height: 10vh;
+    background:#74FF00;
+    border-bottom: 3px solid black;
+    font-family: 'Staatliches', cursive;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 10vh;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 50vw, 50vw;
+    grid-template-rows: 80vh;
+}
+
+#left{
+    background: #2083F8;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    font-size: 4vw;
+    border-right: 3px solid black;
+}
+
+#right{
+    background: #E81A30;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    font-size: 4vw;
+}
+
+#options{
+    display: flex;
+    height: 10vh;
+}
+
+.choice{
+    width: 25vw;
+    line-height: 10vh;
+    font-family: 'Staatliches', cursive;
+    font-size: 3vw;
+    text-align: center;
+    background: #74FF00;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    cursor: pointer;
+}
+
+.choice:hover{
+    background: black;
+    color: #74FF00;
+}
+
+#modalparent{
+    display: none; 
+    position: fixed;
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal{
+    font-family: 'Staatliches', cursive;
+    font-size: 5vh;
+    width: 50vw;
+    height: 50vh;
+    background: white;
+    text-align: center;
+    border: 3px solid black;
+    margin: 0 auto;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 20vw;
+    height: 10vh;
+    font-family: 'Staatliches', cursive;
+    font-size: 5vh;
+    background: #FFE800;
+    color: black;
+    border: solid black;
+    border-radius: 25px;
+}
+
+button:hover{
+    background: black;
+    color: #FFE800;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    #left, #right{
+        font-size: 7vw;
+    }
+    #status{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #left, #right{
+        font-size: 8vw;
+    }
+    canvas{
+        width: 90%;
+    }
+    .choice{
+        font-size: 4vw;
+    }
+    #modal{
+        width: 75vw;
+        height: 50vh;
+    }
+    button{
+        width: 40vw;
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #left, #right{
+        font-size: 9vw;
+    }
+    #left{
+        border-right: none;
+    }
+    body{
+        overflow-y: visible;
+    }
+    .choice{
+        font-size: 5vw;
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #modal{
+        width: 90vw;
+        height: 60vh;
+    }
+}
+
